@@ -2,10 +2,10 @@
 include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $id = $_POST['id'];
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
-    $kehadiran = $_POST['kehadiran'];
-    
+   $kehadiran = $_POST['kehadiran'];
 
     // update data di database
     $sql = "UPDATE datasiswa SET Nama='$nama', Kelas='$kelas', Kehadiran='$kehadiran' WHERE ID='$id'";
